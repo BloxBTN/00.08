@@ -1,47 +1,43 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="theme-color" content="#070b16">
-<title>Blox BTN</title>
-<link rel="stylesheet" href="style.css">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="theme-color" content="#07070d"><title>Blox BTN — Farm</title><link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header class="topbar">
-  <a class="brand" href="index.html"><span class="brand-box">BX</span><strong>Blox BTN</strong></a>
-  <a class="support-top" href="jogos.html">🎮 Jogos e preços</a>
+  <a class="brand" href="index.html"><img src="logo.svg" alt="Blox BTN"><strong>Blox BTN</strong></a>
+  <nav><a href="index.html">Início</a><a href="jogos.html">Jogos e preços</a></nav>
+  <button class="menu" onclick="toggleMenu()" aria-label="Abrir menu">☰</button>
 </header>
 <main>
 <section class="hero">
-  <div>
-    <span class="eyebrow">BLOX BTN</span>
-    <h1>Farm rápido e <span>seguro.</span></h1>
-    <p>Escolha um jogo, veja os serviços e fale com o suporte pelo chat.</p>
-    <a class="btn" href="jogos.html">Ver jogos e preços</a>
+  <div class="hero-glow"></div><div class="hero-content">
+    <span class="eyebrow">BLOX BTN • FARM</span>
+    <h1>Seu jogo.<br><span>Seu farm.</span></h1>
+    <p>Escolha o jogo, veja os serviços disponíveis e fale com o suporte para fazer seu pedido.</p>
+    <div class="hero-actions"><a class="main-button" href="jogos.html">Ver jogos e preços →</a></div>
   </div>
-  <div class="hero-card"><div class="game-icon">🎮</div><h3>Suporte online</h3><p>Use o chat no canto da tela para falar com a equipe.</p></div>
+  <div class="hero-card"><img src="logo.svg" alt="" class="hero-logo-img"><strong>FARM ONLINE</strong><p>Atendimento pelo chat do suporte.</p><div class="status"><i></i> Atendimento disponível</div></div>
 </section>
-<section class="section">
-  <span class="eyebrow">SUPORTE</span>
-  <h2>Fale com a equipe</h2>
-  <p>O chat abre diretamente no site. Não colocamos formulário de telefone ou Gmail no Blox BTN.</p>
+<section class="section catalog-home">
+  <div class="section-head"><div><span class="eyebrow">CATÁLOGO</span><h2>Jogos para farm</h2></div><a href="jogos.html" class="see-all">Ver todos →</a></div>
+  <div class="cards three">
+    <a class="game-preview bf" href="precos.html?jogo=blox-fruits"><b>Blox Fruits</b><small>Farm de nível, maestria e itens</small></a>
+    <a class="game-preview ovo" href="precos.html?jogo=roube-um-ovo"><b>Roube um Ovo</b><small>Velo, ovos e pets</small></a>
+    <a class="game-preview noites" href="precos.html?jogo=99-noites"><b>99 Noites</b><small>Farm por tempo</small></a>
+  </div>
+</section>
+<section class="section support-section">
+  <div class="support-panel"><div><span class="eyebrow">SUPORTE</span><h2>Precisa de ajuda?</h2><p>Ao abrir o chat, você verá a mensagem inicial e poderá falar diretamente com a equipe.</p></div><button class="main-button" onclick="openSupport()">Abrir suporte →</button></div>
 </section>
 </main>
-<footer>Blox BTN • 2026</footer>
-
-<!-- Tawk.to: suporte em português -->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/6ab059ace9134d343e1acadb/1k30dsj8l';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-
-</body>
-</html>
+<footer><strong>Blox BTN</strong><span>© 2026 Blox BTN</span></footer>
+<div class="support-float" onclick="openSupport()">💬 <span>Suporte</span></div>
+<script src="script.js"></script>
+<!--Start of Tawk.to Script--><script type="text/javascript">
+var Tawk_API=Tawk_API||{},Tawk_LoadStart=new Date();
+Tawk_API.onLoad=function(){if(Tawk_API.hideWidget)Tawk_API.hideWidget();};
+(function(){var s1=document.createElement('script'),s0=document.getElementsByTagName('script')[0];s1.async=true;s1.src='https://embed.tawk.to/6ab059ace9134d343e1acadb/1k30dsj8l';s1.charset='UTF-8';s1.setAttribute('crossorigin','*');s0.parentNode.insertBefore(s1,s0);})();
+</script><!--End of Tawk.to Script-->
+</body></html>
