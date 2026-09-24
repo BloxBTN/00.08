@@ -1,7 +1,25 @@
 <!DOCTYPE html>
-<html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><meta name="theme-color" content="#070b16"><title>Blox BTN — Preços</title><link rel="stylesheet" href="style.css"></head>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="theme-color" content="#05040c"><title>Blox BTN — Preços</title>
+<link rel="stylesheet" href="style.css">
+</head>
 <body>
-<header class="topbar"><a class="brand" href="index.html"><span class="brand-box">BX</span><strong>Blox BTN</strong></a><a class="support-top" href="https://discord.gg/Q7dqHXftC" target="_blank" rel="noopener">💬 Suporte</a></header>
+<header class="topbar">
+  <a class="brand" href="index.html"><span class="brand-box">BX</span><strong>Blox BTN</strong></a>
+  <button class="chat-top" type="button" onclick="openChat()">💬 Chat PV</button>
+</header>
 <main class="prices-page"><a class="back" href="jogos.html">← Jogos</a><section id="gameDetails"></section></main>
-<a class="floating-support" href="https://discord.gg/Q7dqHXftC" target="_blank" rel="noopener" aria-label="Abrir suporte">💬</a>
-<script src="script.js"></script></body></html>
+
+<div id="chatPanel" class="chat-panel" aria-hidden="true">
+  <div class="chat-head"><div><strong>Chat PV</strong><small>Atendimento Blox BTN</small></div><button type="button" onclick="closeChat()">×</button></div>
+  <div class="chat-body">
+    <div class="chat-bubble bot">Olá! 👋<br>Envie sua dúvida ou o jogo que você quer consultar.</div>
+    <p class="chat-note">O chat privado precisa do código do widget do seu Tawk.to para funcionar diretamente no site.</p>
+    <button class="chat-action" type="button" onclick="openTawk()">Abrir atendimento</button>
+  </div>
+</div>
+<button class="floating-chat" type="button" onclick="openChat()" aria-label="Abrir chat privado">💬</button>
+<script src="script.js"></script>
+</body></html>
