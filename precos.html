@@ -1,25 +1,43 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="theme-color" content="#05040c"><title>Blox BTN — Preços</title>
-<link rel="stylesheet" href="style.css">
-</head>
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Blox BTN — Preços</title><link rel="stylesheet" href="style.css"></head>
 <body>
 <header class="topbar">
-  <a class="brand" href="index.html"><span class="brand-box">BX</span><strong>Blox BTN</strong></a>
-  <button class="chat-top" type="button" onclick="openChat()">💬 Chat PV</button>
+<a class="brand" href="index.html"><span class="brand-box">BX</span><strong>Blox BTN</strong></a>
+<nav><a href="index.html#como">Como funciona</a><a href="jogos.html">Jogos e preços</a><a href="index.html#robux">Robux</a><a class="support-top" href="javascript:void(0)" onclick="openSupport()">💬 Suporte</a></nav>
+<button class="menu" onclick="toggleMenu()">☰</button>
 </header>
-<main class="prices-page"><a class="back" href="jogos.html">← Jogos</a><section id="gameDetails"></section></main>
-
-<div id="chatPanel" class="chat-panel" aria-hidden="true">
-  <div class="chat-head"><div><strong>Chat PV</strong><small>Atendimento Blox BTN</small></div><button type="button" onclick="closeChat()">×</button></div>
-  <div class="chat-body">
-    <div class="chat-bubble bot">Olá! 👋<br>Envie sua dúvida ou o jogo que você quer consultar.</div>
-    <p class="chat-note">O chat privado precisa do código do widget do seu Tawk.to para funcionar diretamente no site.</p>
-    <button class="chat-action" type="button" onclick="openTawk()">Abrir atendimento</button>
-  </div>
-</div>
-<button class="floating-chat" type="button" onclick="openChat()" aria-label="Abrir chat privado">💬</button>
-<script src="script.js"></script>
+<main class="prices-page">
+<a class="back" href="jogos.html">← Jogos</a>
+<div id="gameDetails"></div>
+</main>
+<footer><strong>Blox BTN</strong><span>© 2026 Blox BTN</span></footer>
+<script>
+const data={
+"blox-fruits":{name:"Blox Fruits",items:["Farm de nível — consultar","Maestria — consultar","Farm de itens — consultar"]},
+"roube-um-ovo":{name:"Roube um Ovo",items:["Velo — consultar","Ovos 100M+ — consultar","Pets 100M+ / 1B+ — consultar"]},
+"murder-mystery-2":{name:"Murder Mystery 2",items:["Emotes — consultar"]},
+"rivals":{name:"RIVALS",items:["Up de armas — consultar"]},
+"99-noites":{name:"99 Noites",items:["Farm por 30 min — consultar"]},
+"mais-1-speed":{name:"+1 Speed",items:["Farm de velo — consultar"]}
+};
+const key=new URLSearchParams(location.search).get("jogo")||"blox-fruits";
+const g=data[key]||data["blox-fruits"];
+document.getElementById("gameDetails").innerHTML=`<span class="eyebrow">PREÇOS</span><h1>${g.name}</h1><p class="sub">Consulte o suporte para confirmar disponibilidade e valores.</p><div class="price-list">${g.items.map(x=>`<div class="price-row"><span>${x.split(" — ")[0]}</span><b>${x.split(" — ")[1]}</b><button onclick="openSupport()">Suporte</button></div>`).join("")}</div>`;
+function openSupport(){if(window.Tawk_API && typeof Tawk_API.maximize==="function")Tawk_API.maximize();}
+function toggleMenu(){document.querySelector("nav").classList.toggle("open");}
+</script>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/6ab059ace9134d343e1acadb/1k30dsj8l';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
 </body></html>

@@ -1,17 +1,14 @@
-BLOX BTN — versão atualizada
+# Blox BTN
+Site estático para GitHub Pages.
 
 Arquivos:
 - index.html
 - jogos.html
 - precos.html
-- script.js
 - style.css
-- ceu.jpeg
+- script.js
 
-Alterações:
-- Fundo usando a foto da Via Láctea enviada pelo usuário em todas as páginas.
-- Novo botão "Chat PV" e painel de atendimento.
-- Estrutura preparada para Tawk.to: basta inserir o código do Widget do Tawk.to no site para o botão "Abrir atendimento" abrir o chat real.
+O suporte usa Tawk.to e o código do widget já está incluído nas três páginas.
+O site não deve pedir senha, cookie ou códigos de autenticação.
 
-Importante:
-O GitHub Pages é apenas hospedagem estática. O chat privado real depende do serviço Tawk.to e do código do Widget da propriedade Blox BTN.
+Para publicar: envie todos os arquivos para a raiz do repositório do GitHub Pages.
