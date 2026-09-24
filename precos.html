@@ -1,43 +1,10 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Blox BTN — Preços</title><link rel="stylesheet" href="style.css"></head>
-<body>
-<header class="topbar">
-<a class="brand" href="index.html"><span class="brand-box">BX</span><strong>Blox BTN</strong></a>
-<nav><a href="index.html#como">Como funciona</a><a href="jogos.html">Jogos e preços</a><a href="index.html#robux">Robux</a><a class="support-top" href="javascript:void(0)" onclick="openSupport()">💬 Suporte</a></nav>
-<button class="menu" onclick="toggleMenu()">☰</button>
-</header>
-<main class="prices-page">
-<a class="back" href="jogos.html">← Jogos</a>
-<div id="gameDetails"></div>
-</main>
-<footer><strong>Blox BTN</strong><span>© 2026 Blox BTN</span></footer>
-<script>
-const data={
-"blox-fruits":{name:"Blox Fruits",items:["Farm de nível — consultar","Maestria — consultar","Farm de itens — consultar"]},
-"roube-um-ovo":{name:"Roube um Ovo",items:["Velo — consultar","Ovos 100M+ — consultar","Pets 100M+ / 1B+ — consultar"]},
-"murder-mystery-2":{name:"Murder Mystery 2",items:["Emotes — consultar"]},
-"rivals":{name:"RIVALS",items:["Up de armas — consultar"]},
-"99-noites":{name:"99 Noites",items:["Farm por 30 min — consultar"]},
-"mais-1-speed":{name:"+1 Speed",items:["Farm de velo — consultar"]}
-};
-const key=new URLSearchParams(location.search).get("jogo")||"blox-fruits";
-const g=data[key]||data["blox-fruits"];
-document.getElementById("gameDetails").innerHTML=`<span class="eyebrow">PREÇOS</span><h1>${g.name}</h1><p class="sub">Consulte o suporte para confirmar disponibilidade e valores.</p><div class="price-list">${g.items.map(x=>`<div class="price-row"><span>${x.split(" — ")[0]}</span><b>${x.split(" — ")[1]}</b><button onclick="openSupport()">Suporte</button></div>`).join("")}</div>`;
-function openSupport(){if(window.Tawk_API && typeof Tawk_API.maximize==="function")Tawk_API.maximize();}
-function toggleMenu(){document.querySelector("nav").classList.toggle("open");}
-</script>
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/6ab059ace9134d343e1acadb/1k30dsj8l';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
-</body></html>
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Blox BTN — Preços</title><link rel="stylesheet" href="style.css"></head><body><header class="topbar"><a class="brand" href="index.html"><img src="logo.svg" alt="Blox BTN"><strong>Blox BTN</strong></a><nav><a href="index.html">Início</a><a href="jogos.html">Jogos e preços</a></nav><button class="menu" onclick="toggleMenu()">☰</button></header><main class="prices-page"><a class="back" href="jogos.html">← Voltar aos jogos</a><div id="gameDetails"></div></main><footer><strong>Blox BTN</strong><span>© 2026 Blox BTN</span></footer><div class="support-float" onclick="openSupport()">💬 <span>Suporte</span></div><script>
+const catalog={
+'blox-fruits':{title:'Blox Fruits',subtitle:'Farm de nível, maestria e itens',image:'https://tr.rbxcdn.com/180DAY-5304fe8fb874c7244eb4fe24ff324b17/500/280/Image/Jpeg/noFilter',items:[['Farm de nível','Consultar'],['Maestria','Consultar'],['Farm de itens','Consultar']],note:'O valor depende do serviço. Fale com o suporte para confirmar.'},
+'roube-um-ovo':{title:'Roube um Ovo',subtitle:'Velo, ovos e pets',image:'https://tr.rbxcdn.com/180DAY-d242991b00219200fb6b4ad45fec79f3/500/280/Image/Jpeg/noFilter',items:[['Velo','Consultar'],['Ovos 100M+','Consultar'],['Pets 100M+ / 1B+','Consultar']],note:'Fale com o suporte para confirmar o valor.'},
+'rivals':{title:'RIVALS',subtitle:'Up de armas',image:'https://tr.rbxcdn.com/180DAY-4fcb22e252c188f45577246217cca4b7/500/280/Image/Jpeg/noFilter',items:[['Up de armas','Consultar']],note:'Detalhes e valores pelo suporte.'},
+'99-noites':{title:'99 Noites',subtitle:'Farm por tempo',image:'https://tr.rbxcdn.com/180DAY-b326856ea20ac1e3c3c8810c6e932b70/500/280/Image/Jpeg/noFilter',items:[['30 minutos','R$ 5'],['1 hora','R$ 10'],['1h30','R$ 15'],['2 horas','R$ 20']],note:'R$ 5 a cada 30 minutos.'},
+'mais-1-speed':{title:'+1 Speed',subtitle:'Farm de velo',image:'https://tr.rbxcdn.com/180DAY-e576f7eff116cf5a941b3e7b46e69c7f/500/280/Image/Jpeg/noFilter',items:[['Velo / Speed','Consultar']],note:'Aqui é velocidade/velo. Fale com o suporte para o valor.'}};
+const g=catalog[new URLSearchParams(location.search).get('jogo')]||catalog['blox-fruits'];
+document.getElementById('gameDetails').innerHTML=`<div class="selected-game" style="--bg:url('${g.image}')"><div class="selected-overlay"><span class="eyebrow">PREÇOS</span><h1>${g.title}</h1><p>${g.subtitle}</p></div></div><div class="price-list">${g.items.map(([name,price])=>`<div class="price-row"><div><span class="mini-label">SERVIÇO</span><h2>${name}</h2></div><b class="price-value ${price==='Consultar'?'consult':''}">${price}</b><button class="price-action" onclick="openSupport()">${price==='Consultar'?'Falar no suporte':'Suporte'}</button></div>`).join('')}</div><p class="price-note">${g.note}</p><div class="support-note"><strong>💬 Suporte</strong><span>Mensagem inicial: “Olá! 👋 Bem-vindo ao suporte Blox BTN. Aguarde que alguém da equipe irá responder.”</span><button class="main-button" onclick="openSupport()">Abrir suporte</button></div>`;
+</script><script src="script.js"></script><script type="text/javascript">var Tawk_API=Tawk_API||{},Tawk_LoadStart=new Date();Tawk_API.onLoad=function(){if(Tawk_API.hideWidget)Tawk_API.hideWidget()};(function(){var s1=document.createElement('script'),s0=document.getElementsByTagName('script')[0];s1.async=true;s1.src='https://embed.tawk.to/6ab059ace9134d343e1acadb/1k30dsj8l';s1.charset='UTF-8';s1.setAttribute('crossorigin','*');s0.parentNode.insertBefore(s1,s0)})();</script></body></html>

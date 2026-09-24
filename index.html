@@ -1,117 +1,43 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="theme-color" content="#070b16">
-<title>Blox BTN</title>
-<link rel="stylesheet" href="style.css">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="theme-color" content="#07070d"><title>Blox BTN — Farm</title><link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header class="topbar">
-  <a class="brand" href="index.html"><span class="brand-box">BX</span><strong>Blox BTN</strong></a>
-  <nav>
-    <a href="index.html#como">Como funciona</a>
-    <a href="jogos.html">Jogos e preços</a>
-    <a href="index.html#robux">Robux</a>
-    <a class="support-top" href="javascript:void(0)" onclick="openSupport()">💬 Suporte</a>
-  </nav>
+  <a class="brand" href="index.html"><img src="logo.svg" alt="Blox BTN"><strong>Blox BTN</strong></a>
+  <nav><a href="index.html">Início</a><a href="jogos.html">Jogos e preços</a></nav>
   <button class="menu" onclick="toggleMenu()" aria-label="Abrir menu">☰</button>
 </header>
-
 <main>
 <section class="hero">
-  <div class="hero-content">
-    <span class="eyebrow">BLOX BTN</span>
-    <h1>Farm rápido<br><span>e seguro.</span></h1>
-    <p>Serviços para seus jogos favoritos, com atendimento pelo suporte e sem pedir sua senha.</p>
-    <div class="hero-actions">
-      <a class="main-button" href="jogos.html">Ver jogos e preços <span>→</span></a>
-      <a class="ghost-button" href="javascript:void(0)" onclick="openSupport()">Falar no suporte</a>
-    </div>
-    <div class="trust">
-      <div><b>🔐</b><span>Sem senha</span></div>
-      <div><b>⚡</b><span>Pedido simples</span></div>
-      <div><b>💬</b><span>Suporte online</span></div>
-    </div>
+  <div class="hero-glow"></div><div class="hero-content">
+    <span class="eyebrow">BLOX BTN • FARM</span>
+    <h1>Seu jogo.<br><span>Seu farm.</span></h1>
+    <p>Escolha o jogo, veja os serviços disponíveis e fale com o suporte para fazer seu pedido.</p>
+    <div class="hero-actions"><a class="main-button" href="jogos.html">Ver jogos e preços →</a></div>
   </div>
-  <div class="hero-card">
-    <div class="orb"></div>
-    <div class="hero-logo">BX</div>
-    <h3>Blox BTN</h3>
-    <p>Escolha um jogo, confira os preços e fale com o suporte.</p>
-    <div class="mini-line"></div>
-    <small>Atendimento pelo chat</small>
-  </div>
+  <div class="hero-card"><img src="logo.svg" alt="" class="hero-logo-img"><strong>FARM ONLINE</strong><p>Atendimento pelo chat do suporte.</p><div class="status"><i></i> Atendimento disponível</div></div>
 </section>
-
-<section id="como" class="section">
-  <div class="section-head">
-    <div><span class="eyebrow">01</span><h2>Como funciona</h2></div>
-    <p>Do começo ao atendimento em poucos passos.</p>
-  </div>
+<section class="section catalog-home">
+  <div class="section-head"><div><span class="eyebrow">CATÁLOGO</span><h2>Jogos para farm</h2></div><a href="jogos.html" class="see-all">Ver todos →</a></div>
   <div class="cards three">
-    <article class="info-card"><span>01</span><h3>Escolha o jogo</h3><p>Entre no catálogo e escolha o jogo que você procura.</p></article>
-    <article class="info-card"><span>02</span><h3>Veja os preços</h3><p>Abra o jogo para conferir os serviços e valores disponíveis.</p></article>
-    <article class="info-card"><span>03</span><h3>Fale com o suporte</h3><p>Use o chat para tirar dúvidas e combinar o pedido.</p></article>
+    <a class="game-preview bf" href="precos.html?jogo=blox-fruits"><b>Blox Fruits</b><small>Farm de nível, maestria e itens</small></a>
+    <a class="game-preview ovo" href="precos.html?jogo=roube-um-ovo"><b>Roube um Ovo</b><small>Velo, ovos e pets</small></a>
+    <a class="game-preview noites" href="precos.html?jogo=99-noites"><b>99 Noites</b><small>Farm por tempo</small></a>
   </div>
 </section>
-
-<section id="precos" class="section dark-section">
-  <div class="section-head">
-    <div><span class="eyebrow">02</span><h2>Jogos e preços</h2></div>
-    <a href="jogos.html" class="see-all">Ver catálogo →</a>
-  </div>
-  <div class="cards three">
-    <a class="info-card game-preview" href="precos.html?jogo=blox-fruits"><b>Blox Fruits</b><small>Farm e progresso</small></a>
-    <a class="info-card game-preview" href="precos.html?jogo=roube-um-ovo"><b>Roube um Ovo</b><small>Velo, ovos e pets</small></a>
-    <a class="info-card game-preview" href="precos.html?jogo=rivals"><b>RIVALS</b><small>Up de armas</small></a>
-  </div>
-</section>
-
-<section id="robux" class="section robux-section">
-  <div class="robux-box">
-    <div>
-      <span class="eyebrow">03</span>
-      <h2>Robux</h2>
-      <p>Área para informações sobre Robux. Consulte o suporte para saber o que está disponível.</p>
-    </div>
-    <a class="main-button" href="javascript:void(0)" onclick="openSupport()">Consultar <span>→</span></a>
-  </div>
-</section>
-
 <section class="section support-section">
-  <div>
-    <span class="eyebrow">SUPORTE</span>
-    <h2>Precisa de ajuda?</h2>
-    <p>Abra o chat para falar com o atendimento.</p>
-  </div>
-  <button class="main-button" onclick="openSupport()">Abrir suporte</button>
+  <div class="support-panel"><div><span class="eyebrow">SUPORTE</span><h2>Precisa de ajuda?</h2><p>Ao abrir o chat, você verá a mensagem inicial e poderá falar diretamente com a equipe.</p></div><button class="main-button" onclick="openSupport()">Abrir suporte →</button></div>
 </section>
 </main>
-
 <footer><strong>Blox BTN</strong><span>© 2026 Blox BTN</span></footer>
-
-<script>
-function openSupport(){
-  if(window.Tawk_API && typeof Tawk_API.maximize === "function") Tawk_API.maximize();
-}
-function toggleMenu(){
-  document.querySelector("nav").classList.toggle("open");
-}
-</script>
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/6ab059ace9134d343e1acadb/1k30dsj8l';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
-</body>
-</html>
+<div class="support-float" onclick="openSupport()">💬 <span>Suporte</span></div>
+<script src="script.js"></script>
+<!--Start of Tawk.to Script--><script type="text/javascript">
+var Tawk_API=Tawk_API||{},Tawk_LoadStart=new Date();
+Tawk_API.onLoad=function(){if(Tawk_API.hideWidget)Tawk_API.hideWidget();};
+(function(){var s1=document.createElement('script'),s0=document.getElementsByTagName('script')[0];s1.async=true;s1.src='https://embed.tawk.to/6ab059ace9134d343e1acadb/1k30dsj8l';s1.charset='UTF-8';s1.setAttribute('crossorigin','*');s0.parentNode.insertBefore(s1,s0);})();
+</script><!--End of Tawk.to Script-->
+</body></html>
